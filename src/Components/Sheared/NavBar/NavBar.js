@@ -46,13 +46,13 @@ const NavBar = () => {
                             </Nav.Link>
                             <Nav.Link>
                                 <NavLink
-                                    to="/doctors"
+                                    to="/addPlace"
                                     style={{ color: '#000', textDecoration: "none" }}
                                     activeStyle={{
                                         fontWeight: "bold",
                                         color: "#12C1AD"
                                     }}>
-                                    Doctors
+                                    Add Place
                                 </NavLink>
                             </Nav.Link>
                             <Nav.Link>
@@ -77,6 +77,17 @@ const NavBar = () => {
                                     Contact
                                 </NavLink>
                             </Nav.Link>
+                            {user.email && <Nav.Link>
+                                <NavLink
+                                    to="/myBooklist"
+                                    style={{ color: '#000', textDecoration: "none" }}
+                                    activeStyle={{
+                                        fontWeight: "bold",
+                                        color: "#12C1AD"
+                                    }}>
+                                    My Booklist
+                                </NavLink>
+                            </Nav.Link>}
                         </Nav>
                         <Nav
                             className="ms-auto my-2 my-lg-0 d-flex align-items-center"

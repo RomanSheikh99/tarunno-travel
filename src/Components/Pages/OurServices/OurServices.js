@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import useServices from '../../../Hooks/useServices';
 import Service from '../../Sheared/Service/Service';
 
 const OurServices = () => {
-    const { services } = useServices();
+    const [places, setPlaces] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/places')
+            .then(res => res.json())
+            .then(data => setPlaces(data))
+    }, []);
     return (
         <div>
             <div
@@ -17,8 +23,8 @@ const OurServices = () => {
             <Container>
                 <Row className="g-4 my-3">
                     {
-                        services.map(service => <Service
-                            key={service.id}
+                        places.map(service => <Service
+                            key={service._id}
                             service={service}>
                         </Service>)
                     }

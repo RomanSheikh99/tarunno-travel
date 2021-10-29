@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Service = ({ service }) => {
-
+const Service = ({ service, index}) => {
     return (
         <Col md={4} sm={6}>
             <Card className='Services-img'>
@@ -15,22 +14,20 @@ const Service = ({ service }) => {
                     
                     variant="top"
                     style={{ maxHeight: '160px' }}
-                    src={service.image} />
+                    src={service.img} />
                 <Card.Body>
                     <Card.Title>{service.name}</Card.Title>
                     <Card.Text>
-                        {service.description.slice(0, 100)}...
+                        {service.desc.slice(0, 100)}...
                     </Card.Text>
-                    <Link
-                        to={`/ServiceDetails/${service.id}`}
-                        className="text-decoration-none d-flex align-items-center">
-                        <span>Learn More</span>
-                        <span style={{ fontSize: '12px',marginLeft:'8px',fontWeight:'300' }}>
-                            <FontAwesomeIcon icon={faGreaterThan}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faGreaterThan}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faGreaterThan}></FontAwesomeIcon>
-                        </span>
-                    </Link>
+                    <div className="d-flex justify-content-between align-items-center">
+                        <h4>${service.rate}</h4>
+                        <Link
+                            to={`/ServiceDetails/${service._id}`}
+                            className="text-decoration-none d-flex align-items-center">
+                            Book Now
+                        </Link>
+                    </div>
                 </Card.Body>
             </Card>
         </Col>
