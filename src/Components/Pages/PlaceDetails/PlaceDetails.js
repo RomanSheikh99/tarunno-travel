@@ -38,7 +38,6 @@ const PlaceDetails = () => {
             .then(res => {
                 if (res.data.insertedId) {
                     alert(data.name + ' Add To Booklist')
-                    // window.history.back();
                     history.push('/allPlaces')
                 }
             })
