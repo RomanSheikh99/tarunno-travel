@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import oops from '../../../images/oops.jpg'
 
 const NotFound = () => {
+    // not found route
     return (
         <div className='my-5'>
             <div className='d-flex justify-content-center align-items-center my-2'>

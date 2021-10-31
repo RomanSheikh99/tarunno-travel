@@ -6,6 +6,7 @@ const AllPlaces = () => {
     const [places, setPlaces] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    // get all places data
     useEffect(() => {
         fetch('https://sheltered-depths-95295.herokuapp.com/places')
             .then(res => res.json())
@@ -14,6 +15,7 @@ const AllPlaces = () => {
                 setIsLoading(false)
             })
     }, []);
+    
     if (isLoading) {
         return <div className="d-flex justify-content-center align-items-center my-4">
         <h2>

@@ -5,6 +5,7 @@ const MangeBooklist = () => {
     const [booklist, setBooklist] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // get all booklist place data
     useEffect(() => {
         fetch('https://sheltered-depths-95295.herokuapp.com/booklist')
             .then(res => res.json())
@@ -14,6 +15,7 @@ const MangeBooklist = () => {
             })
     }, [booklist, loading]);
 
+    // delete place from booklist
     const handleDelete = id => {
         console.log(id);
         fetch(`https://sheltered-depths-95295.herokuapp.com/booklist/${id}`, {
@@ -29,6 +31,7 @@ const MangeBooklist = () => {
             })
     };
 
+    // update pending data to approved
     const handleApproved = data => {
         data.status = "approved";
         fetch(`https://sheltered-depths-95295.herokuapp.com/approved/${data._id}`, {

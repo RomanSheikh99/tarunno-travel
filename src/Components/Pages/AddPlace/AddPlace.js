@@ -5,6 +5,7 @@ import axios from 'axios';
 const AddPlace = () => {
     const { register, handleSubmit,reset } = useForm();
 
+    // add place to database
     const onSubmit = data => {
          axios.post('https://sheltered-depths-95295.herokuapp.com/places', data)
              .then(res => {
@@ -16,6 +17,7 @@ const AddPlace = () => {
     };
 
     return (
+        // add place route
         <div className="d-flex justify-content-center align-items-center">
             <form className="add-place-container md-w-100" onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder="Place Name" {...register("name")} />

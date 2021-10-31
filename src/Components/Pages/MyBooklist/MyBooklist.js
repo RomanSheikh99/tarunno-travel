@@ -9,6 +9,7 @@ const MyBooklist = () => {
     const { user } = useAuth();
 
 
+    // get all booklist place data
     useEffect(() => {
         fetch(`https://sheltered-depths-95295.herokuapp.com/mybooklist`)
             .then(res => res.json())
@@ -18,6 +19,7 @@ const MyBooklist = () => {
             })
     }, [])
     
+    // delete place
     const handleDelete = id => {
         const confirmation = window.confirm('Are You Sure To Delete')
         if (confirmation) {

@@ -6,6 +6,7 @@ const Places = () => {
     const [places, setPlaces] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    // get all places data
     useEffect(() => {
         fetch('https://sheltered-depths-95295.herokuapp.com/places')
             .then(res => res.json())

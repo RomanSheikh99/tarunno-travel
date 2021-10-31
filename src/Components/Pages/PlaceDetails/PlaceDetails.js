@@ -15,10 +15,12 @@ const PlaceDetails = () => {
     const [address, setAddress] = useState('Dhaka, Bangladesh')
 
 
+    // Add user address 
     const onSubmit = address => {
         setAddress(address.address);
     };
 
+    // get single place data
     useEffect(() => {
         fetch(`https://sheltered-depths-95295.herokuapp.com/place/${placeID}`)
             .then(res => res.json())
@@ -28,6 +30,7 @@ const PlaceDetails = () => {
             })
     }, []);
 
+    // add place to booklist
     const handleAddToBookList = data => {
         data._id = data._id + 1;
         data.email = user.email;

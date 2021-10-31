@@ -6,6 +6,7 @@ import slide3 from '../../../../images/slide/slide03.jpg'
 import slide4 from '../../../../images/slide/slide04.jpg'
 
 const Banner = () => {
+    // banner route
     return (
         <div style={{maxHeight:'460px'}}>
             <Carousel fade>

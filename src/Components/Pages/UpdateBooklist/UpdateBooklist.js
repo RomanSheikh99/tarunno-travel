@@ -7,14 +7,16 @@ const UpdateBooklist = () => {
     const { booklistId } = useParams();
     const { register, handleSubmit } = useForm();
 
+    // get all my booklist data
     useEffect(() => {
         fetch(`https://sheltered-depths-95295.herokuapp.com/mybooklist`)
             .then(res => res.json())
             .then(data => setPlaces(data))
     }, [])
 
-    const updatePlace = places.find(place => place._id == booklistId)
+    const updatePlace = places.find(place => place._id === booklistId)
 
+    // react hook form function
     const onSubmit = data => {
         updatePlace.address = data.address;
         fetch(`https://sheltered-depths-95295.herokuapp.com/mybooklist/${booklistId}`, {
