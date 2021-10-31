@@ -10,14 +10,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.Services-img{
+.places-img{
   overflow: hidden;
   
 }
-.Services-img img{
+.places-img img{
   transition: 1s;
 }
-.Services-img:hover img{
+.places-img:hover img{
   transform: scaleX(1.2);
 }
 .add-place-container{
@@ -41,4 +41,10 @@ body {
   height: 120px;
   border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .md-w-100{
+    width: 100%;
+  }
 }

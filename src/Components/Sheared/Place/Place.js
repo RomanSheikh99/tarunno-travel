@@ -1,15 +1,13 @@
-import { faGreaterThan } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 
-const Service = ({ service, index}) => {
+const Place = ({ service, index}) => {
     return (
         <Col md={4} sm={6}>
-            <Card className='Services-img'>
+            <Card className='places-img'>
                 <Card.Img
                     
                     variant="top"
@@ -23,8 +21,8 @@ const Service = ({ service, index}) => {
                     <div className="d-flex justify-content-between align-items-center">
                         <h4>${service.rate}</h4>
                         <Link
-                            to={`/ServiceDetails/${service._id}`}
-                            className="text-decoration-none d-flex align-items-center">
+                            to={`/placeDetails/${service._id}`}
+                            className="text-decoration-none btn btn-outline-dark d-flex align-items-center">
                             Book Now
                         </Link>
                     </div>
@@ -34,4 +32,4 @@ const Service = ({ service, index}) => {
     );
 };
 
-export default Service;
+export default Place;

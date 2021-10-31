@@ -1,8 +1,5 @@
-import { faClock, faHandHoldingMedical, faTrophy, faUsers } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import team from '../../../images/team.png'
+import {Col, Container, Row } from 'react-bootstrap';
 
 const About = () => {
     return (
@@ -15,61 +12,19 @@ const About = () => {
                 </Container>
             </div>
             <Container>
-                <div className="text-center my-3">
-                    <h2 className="my-3">A LITTLE BIT ABOUT US</h2>
-                    <p className="px-5">Dipto Hospital Ltd. is an advanced Centre for diagnostic and medical services. It is one of the prestigious diagnostic complexes of Bangladesh which started its activities in 1983. Dipto Hospital Ltd. is the largest diagnostic services provider organization in private sector of the country. It is been pioneer in introducing world latest medical equipments and advanced technology to provide round the clock medical investigations and consultancy services.</p>
-                    <div>
-                        <img className="img-fluid" src={team} alt="" />
-                    </div>
-                </div>
-                <div className="my-3">
-                    <Row>
-                        <Col md={3} sm={6}>
-                            <div className='d-flex align-items-center'>
-                                <div style={{ fontSize: '60px', marginRight: '8px' }}>
-                                    <FontAwesomeIcon icon={faUsers}></FontAwesomeIcon>
-                                </div>
-                                <div>
-                                    <h4>24563</h4>
-                                    <span>HAPPY Patients</span>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div className='d-flex align-items-center'>
-                                <div style={{ fontSize: '60px', marginRight: '8px' }}>
-                                    <FontAwesomeIcon icon={faTrophy}></FontAwesomeIcon>
-                                </div>
-                                <div>
-                                    <h4>885</h4>
-                                    <span>AWARDS Win</span>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div className='d-flex align-items-center'>
-                                <div style={{ fontSize: '60px', marginRight: '8px' }}>
-                                    <FontAwesomeIcon icon={faClock}></FontAwesomeIcon>
-                                </div>
-                                <div>
-                                    <h4>24/7</h4>
-                                    <span>OPEN Hours</span>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col md={3} sm={6}>
-                            <div className='d-flex align-items-center'>
-                                <div style={{ fontSize: '60px', marginRight: '8px' }}>
-                                    <FontAwesomeIcon icon={faHandHoldingMedical}></FontAwesomeIcon>
-                                </div>
-                                <div>
-                                    <h4>17380</h4>
-                                    <span>SUCCESSFUL Surgery</span>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
+                <Row className="my-5">
+                    <Col md={5}>
+                        <div className="mb-5">
+                            <img className="img-fluid w-100 rounded-3" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fSbcmJsnKRQ2Tho1kufe83HIVQdgd3zo8g&usqp=CAU' alt="" />
+                        </div>
+                    </Col>
+                    <Col md={7}>
+                        <div className="mb-5">
+                            <h2 className="mb-2">A LITTLE BIT ABOUT US</h2>
+                            <p className="">Bangladesh is a land of mystery and intrigue. The country is centuries old and while it has seen many visitors over the years, it is only now starting to experience a commercial tourism boom. In many respects, Bangladesh is a land of opportunity and adventure. All you need do is step out and discover its many mysteries for yourself.There are so many things to be enjoyed here. Perhaps one of the most popular activities is that of sunning yourself on the exquisite white sandy beaches of Cox’s Bazaar and Teknaaf. Both beaches are situated on the eastern coast of the Bay of Bengal and are relatively unspoilt by tourists making them a great place to spend vacation time. Another attraction is the many archaeological sites in the country. They are interesting from a cultural and architectural point of view and can be fascinating to tour.</p>
+                        </div>
+                    </Col>
+                </Row>
             </Container>
         </div>
     );

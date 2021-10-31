@@ -1,14 +1,16 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Newsletter from '../Newsletter/Newsletter';
-import Services from '../Services/Services';
+import Contact from '../Contact/Contact';
+import Gellary from '../Gellary/Gellary';
+import Places from '../Places/Places';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Services></Services>
-            <Newsletter></Newsletter>
+            <Places></Places>
+            <Gellary></Gellary>
+            <Contact></Contact>
         </div>
     );
 };

@@ -35,28 +35,6 @@ const NavBar = () => {
                             </Nav.Link>
                             <Nav.Link>
                                 <NavLink
-                                    to="/services"
-                                    style={{ color: '#000', textDecoration: "none" }}
-                                    activeStyle={{
-                                        fontWeight: "bold",
-                                        color: "#12C1AD"
-                                    }}>
-                                    Services
-                                </NavLink>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <NavLink
-                                    to="/addPlace"
-                                    style={{ color: '#000', textDecoration: "none" }}
-                                    activeStyle={{
-                                        fontWeight: "bold",
-                                        color: "#12C1AD"
-                                    }}>
-                                    Add Place
-                                </NavLink>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <NavLink
                                     to="/about"
                                     style={{ color: '#000', textDecoration: "none" }}
                                     activeStyle={{
@@ -68,13 +46,13 @@ const NavBar = () => {
                             </Nav.Link>
                             <Nav.Link>
                                 <NavLink
-                                    to="/contact"
+                                    to="/allPlaces"
                                     style={{ color: '#000', textDecoration: "none" }}
                                     activeStyle={{
                                         fontWeight: "bold",
                                         color: "#12C1AD"
                                     }}>
-                                    Contact
+                                    All Places
                                 </NavLink>
                             </Nav.Link>
                             {user.email && <Nav.Link>
@@ -88,20 +66,34 @@ const NavBar = () => {
                                     My Booklist
                                 </NavLink>
                             </Nav.Link>}
+                            {user.email && <Nav.Link>
+                                <NavLink
+                                    to="/MangeBooklist"
+                                    style={{ color: '#000', textDecoration: "none" }}
+                                    activeStyle={{
+                                        fontWeight: "bold",
+                                        color: "#12C1AD"
+                                    }}>
+                                    Mange Booklist
+                                </NavLink>
+                            </Nav.Link>}
+                            {user.email && <Nav.Link>
+                                <NavLink
+                                    to="/addPlace"
+                                    style={{ color: '#000', textDecoration: "none" }}
+                                    activeStyle={{
+                                        fontWeight: "bold",
+                                        color: "#12C1AD"
+                                    }}>
+                                    Add Place
+                                </NavLink>
+                            </Nav.Link>}
                         </Nav>
                         <Nav
                             className="ms-auto my-2 my-lg-0 d-flex align-items-center"
                             navbarScroll
                         >
-                            {user.email ? <span className="me-2">{user.displayName ? user.displayName : user.email}</span> : <Button
-                                style={{ background: 'none', outline: 'none' }}
-                                className="text-black border-0">
-                                <Link
-                                    style={{ color: '#000', textDecoration: "none" }}
-                                    to='/logIn'>
-                                    Log In
-                                </Link>
-                            </Button>}
+                            {user.email && <span className="me-2">{user.displayName ? user.displayName : user.email}</span>}
                             {user.email ? <Button
                                 onClick={logOut}
                                 style={{ background: '#12C1AD', outline: 'none', color: '#fff' }}
@@ -112,8 +104,8 @@ const NavBar = () => {
                                 className="rounded-pill border-0">
                                 <Link
                                     style={{ color: '#fff', textDecoration: "none" }}
-                                    to='/register'>
-                                    Register
+                                    to='/logIn'>
+                                    Log In
                                 </Link>
                             </Button>}
                         </Nav>
